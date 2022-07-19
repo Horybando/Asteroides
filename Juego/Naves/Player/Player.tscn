@@ -1,13 +1,48 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Juego/Naves/Player/player_red.png" type="Texture" id=1]
 [ext_resource path="res://Juego/Naves/Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://Juego/Naves/Player/new_physicsmaterial.tres" type="PhysicsMaterial" id=3]
 [ext_resource path="res://Juego/Proyectiles/Canion.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Juego/Proyectiles/LaserBeam2D.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Juego/Naves/Trail/Trail2D.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Juego/Naves/Motor/MotorSFX.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Juego/Naves/Motor/MotorSFX.gd" type="Script" id=8]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 34.2442
+
+[sub_resource type="Animation" id=2]
+resource_name = "default"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "spawn"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 0.7, 0.9, 1.1, 1.3, 1.5, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.8, 0.8 ), Vector2( 0.6, 0.6 ), Vector2( 0.4, 0.4 ), Vector2( 0.4, 0.4 ), Vector2( 0.6, 0.6 ), Vector2( 0.8, 0.8 ), Vector2( 1, 1 ), Vector2( 0.8, 0.8 ), Vector2( 0.6, 0.6 ), Vector2( 0.4, 0.4 ), Vector2( 0.4, 0.4 ), Vector2( 0.6, 0.6 ), Vector2( 0.8, 0.8 ), Vector2( 1, 1 ) ]
+}
 
 [node name="Navecita" type="RigidBody2D"]
 z_index = 50
@@ -30,9 +65,32 @@ position = Vector2( -3, 33 )
 
 [node name="Sprite" type="Sprite" parent="."]
 rotation = 1.5708
+scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="InicioEstela" type="Position2D" parent="."]
+z_as_relative = false
+
+[node name="Trail2D" parent="InicioEstela" instance=ExtResource( 6 )]
+position = Vector2( -10, 0 )
+z_as_relative = false
+points = PoolVector2Array( 0, 0, 60, 0 )
+width = 60.0
+target_path = NodePath("..")
+
+[node name="MotorSFX" parent="." instance=ExtResource( 7 )]
+script = ExtResource( 8 )
+
+[node name="Tween" type="Tween" parent="MotorSFX"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "spawn"
+anims/default = SubResource( 2 )
+anims/spawn = SubResource( 3 )
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 
 [editable path="Canion"]
