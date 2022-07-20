@@ -14,7 +14,7 @@ export var resolution := 5.0
 # Life of each point in seconds before it is deleted.
 export var lifetime := 0.5
 # Maximum number of points allowed on the curve.
-export var max_points := 100
+export var max_points := 100 setget set_max_points
 
 # Optional path to the target node to follow. If not set, the instance follows its parent.
 export var target_path: NodePath

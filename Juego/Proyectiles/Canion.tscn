@@ -11,7 +11,7 @@ cadencia_disparo = 0.25
 velocidad_proyectil = 1600
 
 [node name="PuntoIzquierdo" type="Position2D" parent="."]
-position = Vector2( 0.25, -2.1875 )
+position = Vector2( 0.183784, -2.25372 )
 
 [node name="PuntoDerecho" type="Position2D" parent="."]
 position = Vector2( 0.25, 3.25 )

@@ -34,6 +34,13 @@ func _process(_delta:float) -> void:
 	if esta_disparando and esta_enfriando:
 		disparar()
 		
+	
+## Metodos custom
+func almacenar_puntos_disparo() -> void:
+	for nodo in get_children():
+		if nodo is Position2D:
+			puntos_disparo.append(nodo)
+			
 func disparar() -> void:
 	esta_enfriando = false
 	disparo_sfx.play()
@@ -47,14 +54,6 @@ func disparar() -> void:
 			danio_proyectil
 		)
 		Eventos.emit_signal("disparo", new_proyectil)
-	
-## Metodos custom
-func almacenar_puntos_disparo() -> void:
-	for nodo in get_children():
-		if nodo is Position2D:
-			puntos_disparo.append(nodo)
-			
-
 
 
 func _on_TimerEnfriamiento_timeout() -> void:

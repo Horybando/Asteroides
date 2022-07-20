@@ -14,7 +14,7 @@ script = ExtResource( 3 )
 explosion = ExtResource( 4 )
 
 [node name="Navecita" parent="." instance=ExtResource( 1 )]
-position = Vector2( 487.72, 295.996 )
+position = Vector2( 576.615, 448.387 )
 physics_material_override = SubResource( 1 )
 gravity_scale = 0.0
 can_sleep = false
