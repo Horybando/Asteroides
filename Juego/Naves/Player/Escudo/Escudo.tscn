@@ -6,11 +6,10 @@
 [ext_resource path="res://Juego/Naves/Player/Escudo/escudo.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Juego/Naves/Player/Escudo/Escudo.gd" type="Script" id=5]
 
-[sub_resource type="CircleShape2D" id=4]
+[sub_resource type="CircleShape2D" id=1]
 radius = 76.3636
 
-[sub_resource type="Animation" id=1]
-resource_name = "activado"
+[sub_resource type="Animation" id=2]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("SpriteCompleto:scale")
@@ -49,8 +48,7 @@ tracks/2/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "activando"
+[sub_resource type="Animation" id=3]
 length = 0.5
 step = 0.01
 tracks/0/type = "value"
@@ -126,7 +124,7 @@ tracks/5/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=4]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("SpriteCompleto:visible")
@@ -171,7 +169,7 @@ collision_mask = 16
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 4 )
+shape = SubResource( 1 )
 
 [node name="SpriteCompleto" type="Sprite" parent="."]
 visible = false
@@ -190,9 +188,9 @@ texture = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "default"
-anims/activado = SubResource( 1 )
-anims/activando = SubResource( 2 )
-anims/default = SubResource( 3 )
+anims/activado = SubResource( 2 )
+anims/activando = SubResource( 3 )
+anims/default = SubResource( 4 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
