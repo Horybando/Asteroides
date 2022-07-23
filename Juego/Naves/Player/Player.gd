@@ -116,12 +116,11 @@ func esta_input_activo() -> bool:
 	return true
 
 func recibir_danio(danio: float) -> void:
+	impacto_sfx.play()  
 	hitpoints -= danio
 	if hitpoints <= 0.0:
 		destruir()
 
-	impacto_sfx.play()    
-	
 func destruir() -> void:
 	controlador_estados(ESTADO.MUERTO)
 
@@ -129,3 +128,9 @@ func destruir() -> void:
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 	if anim_name == "spawn":
 		controlador_estados(ESTADO.VIVO)
+		
+	
+func _on_body_entered(body: Node) -> void:
+	if body is Meteorito:
+		body.destruir()
+		destruir()

@@ -1,10 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Juego/Naves/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://default_env.tres" type="Environment" id=2]
 [ext_resource path="res://Juego/Niveles/Nivel.gd" type="Script" id=3]
 [ext_resource path="res://Juego/Explosion/Explosion.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Juego/Naves/Enemigos/EnemigoDummy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Juego/Explosion/ExplosionMeteorito.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Juego/Meteorito/Meteorito.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Juego/Meteorito/MeteoritoSpawner.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Juego/Niveles/Fondos/fondo.png" type="Texture" id=8]
 
 [sub_resource type="PhysicsMaterial" id=1]
 bounce = 10.0
@@ -12,15 +15,35 @@ bounce = 10.0
 [node name="NivelTest" type="Node2D"]
 script = ExtResource( 3 )
 explosion = ExtResource( 4 )
+meteorito = ExtResource( 6 )
+explosion_meteorito = ExtResource( 5 )
 
 [node name="Navecita" parent="." instance=ExtResource( 1 )]
-position = Vector2( 576.615, 448.387 )
+position = Vector2( 113.094, 391.241 )
 physics_material_override = SubResource( 1 )
 gravity_scale = 0.0
-can_sleep = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 2 )
 
-[node name="EnemigoDummy" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1390.56, 447.647 )
+[node name="MeteoritoSpawner" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1811.76, 76.736 )
+direccion = Vector2( -2, 1 )
+
+[node name="MeteoritoSpawner2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 103.61, 84.655 )
+direccion = Vector2( 2, 1 )
+
+[node name="MeteoritoSpawner3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 65.73, 1018.79 )
+direccion = Vector2( 2, -1 )
+
+[node name="MeteoritoSpawner4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1847.6, 1003.85 )
+direccion = Vector2( -2, -1 )
+
+[node name="fondo" type="Sprite" parent="."]
+position = Vector2( 885.015, 617.112 )
+scale = Vector2( 9.00607, 6.38374 )
+z_index = -30
+texture = ExtResource( 8 )
