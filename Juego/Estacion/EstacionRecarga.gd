@@ -23,6 +23,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		nave_player.get_escudo().controlar_energia(radio_energia_entregada)
 	elif event.is_action("recarga_laser"):
 		nave_player.get_laser().controlar_energia(radio_energia_entregada)
+		
 
 ## Metodos custom
 func puede_recargar(event: InputEvent) -> bool:
@@ -38,7 +39,7 @@ func controlar_energia() -> void:
 	energia -= radio_energia_entregada
 	if energia <= 0.0:
 		$VacioSFX.play()
-		
+	print("Energia Estacion: ", energia)	
 #Señales
 	
 func _on_AreaColision_body_entered(body: Node) -> void:
@@ -48,10 +49,14 @@ func _on_AreaColision_body_entered(body: Node) -> void:
 
 func _on_AreaRecarga_body_entered(body: Node) -> void:
 	if body is Player:
+		player_en_zona = true
 		nave_player = body
 		
 	body.set_gravity_scale(0.1)
 	
 	
 func _on_AreaRecarga_body_exited(body: Node) -> void:
+	if body is Player:
+		player_en_zona = false
+		
 	body.set_gravity_scale(0.0)

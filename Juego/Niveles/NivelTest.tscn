@@ -22,6 +22,16 @@ meteorito = ExtResource( 6 )
 explosion_meteorito = ExtResource( 5 )
 sector_meteoritos = ExtResource( 9 )
 
+[node name="TriggersLluviaMeteoritos" type="Node" parent="."]
+
+[node name="SectorDePeligro" parent="TriggersLluviaMeteoritos" instance=ExtResource( 7 )]
+position = Vector2( 845.145, 951.187 )
+
+[node name="ContenedorEstaciones" type="Node" parent="."]
+
+[node name="EstacionRecarga" parent="ContenedorEstaciones" instance=ExtResource( 11 )]
+position = Vector2( 1669.95, 203.187 )
+
 [node name="Navecita" parent="." instance=ExtResource( 1 )]
 position = Vector2( 273.628, 352.501 )
 physics_material_override = SubResource( 1 )
@@ -30,17 +40,6 @@ gravity_scale = 0.0
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 2 )
 
-[node name="fondo" type="Sprite" parent="."]
-position = Vector2( 948.158, 533.169 )
-scale = Vector2( 9.00607, 6.38374 )
-z_index = -30
-texture = ExtResource( 8 )
-
-[node name="TriggersLluviaMeteoritos" type="Node" parent="."]
-
-[node name="SectorDePeligro" parent="TriggersLluviaMeteoritos" instance=ExtResource( 7 )]
-position = Vector2( 845.145, 951.187 )
-
 [node name="CamaraNivel" type="Camera2D" parent="."]
 script = ExtResource( 10 )
 
@@ -48,7 +47,120 @@ script = ExtResource( 10 )
 
 [node name="TweenCamara" type="Tween" parent="."]
 
-[node name="EstacionRecarga" parent="." instance=ExtResource( 11 )]
-position = Vector2( 1669.95, 203.187 )
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 256, 256 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource( 8 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 500, 0 )
+texture = ExtResource( 8 )
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1000, 0 )
+texture = ExtResource( 8 )
+
+[node name="Sprite4" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1500, 0 )
+texture = ExtResource( 8 )
+
+[node name="Sprite5" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 2000, 0 )
+texture = ExtResource( 8 )
+
+[node name="Sprite6" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 0, 500 )
+texture = ExtResource( 8 )
+
+[node name="Sprite7" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 500, 500 )
+texture = ExtResource( 8 )
+
+[node name="Sprite8" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1000, 500 )
+texture = ExtResource( 8 )
+
+[node name="Sprite9" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1500, 500 )
+texture = ExtResource( 8 )
+
+[node name="Sprite10" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 2000, 500 )
+texture = ExtResource( 8 )
+
+[node name="Sprite11" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 0, 1000 )
+texture = ExtResource( 8 )
+
+[node name="Sprite12" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 500, 1000 )
+texture = ExtResource( 8 )
+
+[node name="Sprite13" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1000, 1000 )
+texture = ExtResource( 8 )
+
+[node name="Sprite14" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1500, 1000 )
+texture = ExtResource( 8 )
+
+[node name="Sprite15" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 2000, 1000 )
+texture = ExtResource( 8 )
+
+[node name="Sprite16" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 0, 1500 )
+texture = ExtResource( 8 )
+
+[node name="Sprite17" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 2500, 0 )
+texture = ExtResource( 8 )
+
+[node name="Sprite18" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 3000, 0 )
+texture = ExtResource( 8 )
+
+[node name="Sprite19" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 2500, 500 )
+texture = ExtResource( 8 )
+
+[node name="Sprite20" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 3000, 500 )
+texture = ExtResource( 8 )
+
+[node name="Sprite21" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 2500, 1000 )
+texture = ExtResource( 8 )
+
+[node name="Sprite22" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 3000, 1000 )
+texture = ExtResource( 8 )
+
+[node name="Sprite23" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 500, 1500 )
+texture = ExtResource( 8 )
+
+[node name="Sprite24" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1000, 1500 )
+texture = ExtResource( 8 )
+
+[node name="Sprite25" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1500, 1500 )
+texture = ExtResource( 8 )
+
+[node name="Sprite26" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 2000, 1500 )
+texture = ExtResource( 8 )
+
+[node name="Sprite27" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 2500, 1500 )
+texture = ExtResource( 8 )
+
+[node name="Sprite28" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 3000, 1500 )
+texture = ExtResource( 8 )
 
 [connection signal="tween_completed" from="TweenCamara" to="." method="_on_TweenCamara_tween_completed"]

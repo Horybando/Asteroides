@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Juego/Explosion/small1.png" type="Texture" id=1]
 [ext_resource path="res://Juego/Explosion/small2.png" type="Texture" id=2]
@@ -8,6 +8,11 @@
 [ext_resource path="res://Juego/Explosion/mediano1.png" type="Texture" id=6]
 [ext_resource path="res://Juego/Explosion/explosionMeteorito.tres" type="AudioStream" id=7]
 [ext_resource path="res://Juego/Explosion/ExplosionMeteorito.gd" type="Script" id=8]
+[ext_resource path="res://Juego/Explosion/humito3.png" type="Texture" id=9]
+[ext_resource path="res://Juego/Explosion/humito.png" type="Texture" id=10]
+[ext_resource path="res://Juego/Explosion/humo.png" type="Texture" id=11]
+[ext_resource path="res://Juego/Explosion/humito2.png" type="Texture" id=12]
+[ext_resource path="res://Juego/Explosion/humomedio2.png" type="Texture" id=13]
 
 [sub_resource type="Animation" id=1]
 resource_name = "default"
@@ -593,13 +598,257 @@ tracks/23/keys = {
 "values": [ true, false ]
 }
 
+[sub_resource type="Animation" id=3]
+resource_name = "explosionMeteorito2"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("humito2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -46.6123, -37.9665 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("humito2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -155.5 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("humito2:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("humito2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("humito3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 53.3786, 46.2364 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("humito3:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 222.5 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("humito3:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("humito3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("humito:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 42.8533, -46.6123 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("humito:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -222.9 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("humito:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("humito:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("humo:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("humo:rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 291.4 ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("humo:scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("humo:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("humomedio2:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -31.952, 30.8243 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("humomedio2:rotation_degrees")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -162.9 ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("humomedio2:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("humomedio2:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
 [node name="ExplosionMeteorito" type="Node2D"]
 script = ExtResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "explosionMeteorito"
 anims/default = SubResource( 1 )
 anims/explosionMeteorito = SubResource( 2 )
+anims/explosionMeteorito2 = SubResource( 3 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
@@ -633,5 +882,39 @@ texture = ExtResource( 6 )
 visible = false
 z_index = 1
 texture = ExtResource( 4 )
+
+[node name="humito2" type="Sprite" parent="."]
+visible = false
+position = Vector2( -46.6123, -37.9665 )
+rotation = -2.71399
+scale = Vector2( 1e-05, 1e-05 )
+texture = ExtResource( 12 )
+
+[node name="humito3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 53.3786, 46.2364 )
+rotation = 3.88336
+scale = Vector2( 1e-05, 1e-05 )
+texture = ExtResource( 9 )
+
+[node name="humito" type="Sprite" parent="."]
+visible = false
+position = Vector2( 42.8533, -46.6123 )
+rotation = -3.89034
+scale = Vector2( 1e-05, 1e-05 )
+texture = ExtResource( 10 )
+
+[node name="humo" type="Sprite" parent="."]
+visible = false
+rotation = 5.08589
+scale = Vector2( 1e-05, 1e-05 )
+texture = ExtResource( 11 )
+
+[node name="humomedio2" type="Sprite" parent="."]
+visible = false
+position = Vector2( -31.952, 30.8243 )
+rotation = -2.84314
+scale = Vector2( 1e-05, 1e-05 )
+texture = ExtResource( 13 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

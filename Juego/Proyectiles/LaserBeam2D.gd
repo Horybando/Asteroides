@@ -91,6 +91,7 @@ func cast_beam(delta: float) -> void:
 
 func controlar_energia(consumo: float) -> void:
 	energia += consumo
+	print("Energia laser: ", energia)
 	if energia > energia_original:
 		energia = energia_original
 	

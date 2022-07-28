@@ -3,7 +3,7 @@
 [ext_resource path="res://Juego/Naves/Player/Escudo/shield1.png" type="Texture" id=1]
 [ext_resource path="res://Juego/Naves/Player/Escudo/shield2.png" type="Texture" id=2]
 [ext_resource path="res://Juego/Naves/Player/Escudo/shield3.png" type="Texture" id=3]
-[ext_resource path="res://Juego/Naves/Player/Escudo/escudo.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Juego/Naves/Player/Escudo/escudo.tres" type="AudioStream" id=4]
 [ext_resource path="res://Juego/Naves/Player/Escudo/Escudo.gd" type="Script" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
@@ -172,7 +172,6 @@ script = ExtResource( 5 )
 shape = SubResource( 1 )
 
 [node name="SpriteCompleto" type="Sprite" parent="."]
-visible = false
 rotation = 1.5708
 texture = ExtResource( 3 )
 
