@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vacio.ogg-839a782a7acef61cdb06e9145e1011f2.oggstr"
+
+[deps]
+
+source_file="res://Juego/Estacion/vacio.ogg"
+dest_files=[ "res://.import/vacio.ogg-839a782a7acef61cdb06e9145e1011f2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

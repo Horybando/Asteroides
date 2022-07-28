@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Juego/Naves/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://default_env.tres" type="Environment" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Juego/Niveles/Fondos/fondo.png" type="Texture" id=8]
 [ext_resource path="res://Juego/Meteorito/SectorMeteoritos.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Juego/Niveles/CamaraJuego.gd" type="Script" id=10]
+[ext_resource path="res://Juego/Estacion/EstacionRecarga.tscn" type="PackedScene" id=11]
 
 [sub_resource type="PhysicsMaterial" id=1]
 bounce = 10.0
@@ -38,7 +39,7 @@ texture = ExtResource( 8 )
 [node name="TriggersLluviaMeteoritos" type="Node" parent="."]
 
 [node name="SectorDePeligro" parent="TriggersLluviaMeteoritos" instance=ExtResource( 7 )]
-position = Vector2( 1009.07, 484.356 )
+position = Vector2( 845.145, 951.187 )
 
 [node name="CamaraNivel" type="Camera2D" parent="."]
 script = ExtResource( 10 )
@@ -47,6 +48,7 @@ script = ExtResource( 10 )
 
 [node name="TweenCamara" type="Tween" parent="."]
 
-[node name="Icon" type="Sprite" parent="."]
+[node name="EstacionRecarga" parent="." instance=ExtResource( 11 )]
+position = Vector2( 1669.95, 203.187 )
 
 [connection signal="tween_completed" from="TweenCamara" to="." method="_on_TweenCamara_tween_completed"]
