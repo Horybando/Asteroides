@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Juego/Naves/Trail/Trail2D.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Juego/Naves/Trail/Trail2D.gd" type="Script" id=2]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 0 ), 0.0, 1.0, 0, 1, Vector2( 1, 1 ), 1.0, 0.0, 1, 0 ]
+
+[sub_resource type="Gradient" id=2]
+colors = PoolColorArray( 0.294118, 0.356863, 0.670588, 0, 0.294118, 0.356863, 0.670588, 1 )
+
+[node name="InicioEstela" type="Position2D"]
+z_as_relative = false
+
+[node name="Trail2D" type="Line2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -10, 0 )
+z_as_relative = false
+points = PoolVector2Array( 0, 0, 60, 0 )
+width = 60.0
+width_curve = SubResource( 1 )
+default_color = Color( 1, 1, 1, 1 )
+gradient = SubResource( 2 )
+joint_mode = 2
+script = ExtResource( 2 )
+is_emitting = true
+lifetime = 0.6
+max_points = 150
+target_path = NodePath("..")
