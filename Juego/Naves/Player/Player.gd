@@ -24,7 +24,10 @@ func get_laser() -> RayoLaser:
 func get_escudo() -> Escudo:
 	return escudo
 
-## Métodos	
+## Métodos
+func _ready() -> void:
+	DatosJuego.set_player_actual(self)
+	
 func _unhandled_input(event: InputEvent) -> void:
 	if not esta_input_activo():
 		return
