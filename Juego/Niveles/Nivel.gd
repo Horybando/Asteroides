@@ -38,7 +38,8 @@ func conectar_seniales() -> void:
 	Eventos.connect("spawn_meteorito", self, "_on_spawn_meteoritos")
 	Eventos.connect("meteorito_destruido", self, "_on_meteorito_destruido")
 	Eventos.connect("base_destruida", self, "_on_base_destruida")
-
+	Eventos.connect("spawn_orbital", self, "_on_spawn_orbital")
+	
 func crear_posicion_aleatoria(rango_horizontal: float, rango_vertical: float) -> Vector2:
 	randomize()
 	var rand_x = rand_range(-rango_horizontal, rango_horizontal)
@@ -164,6 +165,8 @@ func crear_sector_enemigos(num_enemigos: int) -> void:
 		new_interceptor.global_position = player.global_position + spawn_pos
 		contenedor_enemigos.add_child(new_interceptor)
 
+func _on_spawn_orbital(enemigo: EnemigoOrbital) -> void:
+	contenedor_enemigos.add_child(enemigo) 
 ## Señales internas
 func _on_TweenCamara_tween_completed(object: Object, _key: NodePath) -> void:
 	if object.name == "CamaraPlayer":

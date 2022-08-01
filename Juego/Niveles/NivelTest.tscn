@@ -168,6 +168,6 @@ texture = ExtResource( 8 )
 [node name="Navecita" parent="." instance=ExtResource( 1 )]
 
 [node name="BaseEnemiga" parent="." instance=ExtResource( 13 )]
-position = Vector2( 848.135, -21.3815 )
+position = Vector2( 694.953, 551.566 )
 
 [connection signal="tween_completed" from="TweenCamara" to="." method="_on_TweenCamara_tween_completed"]
