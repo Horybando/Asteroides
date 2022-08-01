@@ -37,6 +37,7 @@ func conectar_seniales() -> void:
 # warning-ignore:return_value_discarded
 	Eventos.connect("spawn_meteorito", self, "_on_spawn_meteoritos")
 	Eventos.connect("meteorito_destruido", self, "_on_meteorito_destruido")
+	Eventos.connect("base_destruida", self, "_on_base_destruida")
 
 func crear_posicion_aleatoria(rango_horizontal: float, rango_vertical: float) -> Vector2:
 	randomize()
@@ -70,13 +71,22 @@ func _on_nave_destruida(nave: Player, posicion: Vector2, num_explosiones: int) -
 	if nave is Player:
 		transicion_camaras(
 			posicion,
-			posicion + crear_posicion_aleatoria(-200.0, 200.0),
+			posicion + crear_posicion_aleatoria(200.0, 200.0),
 			camara_nivel,
 			tiempo_transicion_camara
 		)
-	for i in range(num_explosiones):
+	
+	crear_explosion(posicion, num_explosiones, 0.6, Vector2(100.0, 50.0))
+	
+func _on_base_destruida(pos_partes: Array) -> void:
+	for posicion in pos_partes:
+		crear_explosion(posicion)
+		yield(get_tree().create_timer(0.5), "timeout")
+		
+func crear_explosion(posicion: Vector2, numero: int = 1, intervalo: float = 0.0, rangos_aleatorios: Vector2 = Vector2(0.0, 0.0)) -> void:
+	for i in range(numero):
 		var new_explosion:Node2D = explosion.instance()
-		new_explosion.global_position = posicion + crear_posicion_aleatoria(100.0, 50.0)
+		new_explosion.global_position = posicion + crear_posicion_aleatoria(rangos_aleatorios.x, rangos_aleatorios.y)
 		add_child(new_explosion)
 		yield(get_tree().create_timer(0.6),"timeout")
 		

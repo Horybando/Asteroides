@@ -52,11 +52,7 @@ func _on_AreaRecarga_body_entered(body: Node) -> void:
 		player_en_zona = true
 		nave_player = body
 		
-	body.set_gravity_scale(0.1)
-	
-	
 func _on_AreaRecarga_body_exited(body: Node) -> void:
 	if body is Player:
 		player_en_zona = false
 		
-	body.set_gravity_scale(0.0)
