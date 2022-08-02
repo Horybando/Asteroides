@@ -31,6 +31,7 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if not esta_input_activo():
 		return
+
 	
 	# Disparo Rayo
 	if event.is_action_pressed("disparo_secundario"):
@@ -93,3 +94,9 @@ func esta_input_activo() -> bool:
 		return false
 	
 	return true
+
+func desactivar_controles() -> void:
+	controlador_estados(ESTADO.SPAWN)
+	empuje = Vector2.ZERO
+	motor_sfx.sonido_off()
+	laser.set_is_casting(false)
