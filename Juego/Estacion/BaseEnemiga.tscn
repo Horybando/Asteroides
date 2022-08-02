@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Juego/Estacion/AreaAtraccion.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Juego/Estacion/base3.png" type="Texture" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://Juego/Naves/Enemigos/AreaColision.gd" type="Script" id=7]
 [ext_resource path="res://Juego/Naves/Enemigos/EnemigoOrbital.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Juego/Estacion/PosiocionesSpawn.gd" type="Script" id=9]
-[ext_resource path="res://Juego/Estacion/RutaEnemigo.gd" type="Script" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 43.6359, 17.7631 )
@@ -103,11 +102,6 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Curve2D" id=7]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -242.079, -7.86327, 0, 0, 0, 0, -202.715, -90.154, 0, 0, 0, 0, -178.087, -164.037, 0, 0, 0, 0, -128.832, -217.082, 0, 0, 0, 0, -32.6317, -276.98, 0, 0, 0, 0, 26.1022, -275.393, 0, 0, 0, 0, 21.34, -216.659, 0, 0, 0, 0, -21.5198, -194.435, 0, 0, 0, 0, -56.4427, -226.183, 0, 0, 0, 0, -26.282, -246.819, 0, 0, 0, 0, 53.088, -253.169, 0, 0, 0, 0, 116.584, -246.819, 0, 0, 0, 0, 208.653, -203.96, 0, 0, 0, 0, 234.052, -148.401, 0, 0, 0, 0, 246.751, -75.3801, 0, 0, 0, 0, 246.751, -22.9958, 0, 0, 0, 0, 246.751, 26.2136, 0, 0, 0, 0, 243.576, 77.0104, 0, 0, 0, 0, 195.954, 88.1223, 0, 0, 0, 0, 181.667, 35.738, 0, 0, 0, 0, 203.891, 16.6892, 0, 0, 0, 0, 246.751, 29.3884, 0, 0, 0, 0, 286.436, 38.9128, 0, 0, 0, 0, 297.548, 80.1852, 0, 0, 0, 0, 230.877, 121.458, 0, 0, 0, 0, 176.51, 159.697, 0, 0, 0, 0, 148.094, 212.741, 0, 0, 0, 0, 46.1547, 256.297, 0, 0, 0, 0, -17.5482, 288.326, 0, 0, 0, 0, -41.4345, 205.521, 0, 0, 0, 0, 14.3001, 199.151, 0, 0, 0, 0, 82.1609, 228.762, 0, 0, 0, 0, 86.3969, 298.657, 0, 0, 0, 0, -34.3297, 343.135, 0, 0, 0, 0, -193.18, 122.862, 0, 0, 0, 0, -260.957, 129.216, 0, 0, 0, 0, -330.851, 44.4956, 0, 0, 0, 0, -330.851, -31.7528, 0, 0, 0, 0, -271.547, -48.6968, 0, 0, 0, 0, -184.752, -25.3799, 0, 0, 0, 0, -195.899, 47.8713, 0, 0, 0, 0, -248.449, 66.9803, 0, 0, 0, 0, -259.596, 16.023, 0, 0, 0, 0, -242.079, -7.86327 )
-}
-
 [node name="BaseEnemiga" type="Node2D"]
 z_index = 50
 z_as_relative = false
@@ -181,10 +175,6 @@ position = Vector2( 200, 0 )
 
 [node name="Oeste" type="Position2D" parent="PosicionesSpawn"]
 position = Vector2( -200, 0 )
-
-[node name="RutaEnemigo" type="Path2D" parent="."]
-curve = SubResource( 7 )
-script = ExtResource( 10 )
 
 [node name="TimerSpawnerEnemigos" type="Timer" parent="."]
 

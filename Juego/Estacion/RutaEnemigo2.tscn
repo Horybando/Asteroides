@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Juego/Estacion/RutaEnemigo2.gd" type="Script" id=1]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -198.145, -0.725861, 0, 0, 0, 0, -0.365295, -198.505, 0, 0, 0, 0, 200.978, -2.50766, 0, 0, 0, 0, -2.14709, 198.835, 0, 0, 0, 0, -198.145, -0.725861 )
+}
+
+[node name="RutaEnemigo2" type="Path2D"]
+position = Vector2( -0.262631, -0.0335383 )
+rotation = 0.785398
+scale = Vector2( 1.1854, 1.20317 )
+curve = SubResource( 1 )
+script = ExtResource( 1 )
