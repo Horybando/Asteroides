@@ -56,7 +56,7 @@ func destruir() -> void:
 func seleccionar_ruta() -> void:
 	randomize()
 	var indice_ruta:int = randi() % rutas.size() - 1
-	ruta_seleccionada = rutas[indice_ruta].instace()
+	ruta_seleccionada = rutas[indice_ruta].instance()
 	add_child(ruta_seleccionada)
 	
 func spawnear_orbital() -> void:
