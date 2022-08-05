@@ -84,6 +84,13 @@ collide_with_bodies = false
 
 [node name="PathFollow2D" type="PathFollow2D" parent="." index="6"]
 
+[node name="BarraSalud" parent="." index="7"]
+margin_left = -35.5
+margin_top = 24.5
+margin_right = 13.5
+margin_bottom = 34.5
+percent_visible = false
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 
 [editable path="Canion"]

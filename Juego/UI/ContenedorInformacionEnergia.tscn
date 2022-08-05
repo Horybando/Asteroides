@@ -18,9 +18,7 @@ script = ExtResource( 2 )
 [node name="Label" parent="." index="1"]
 anchor_left = 0.00237738
 anchor_right = 0.00237738
-text = "energia laser"
 valign = 0
-percent_visible = -0.0833333
 
 [node name="ProgressBar" type="ProgressBar" parent="." index="3"]
 anchor_left = 0.5

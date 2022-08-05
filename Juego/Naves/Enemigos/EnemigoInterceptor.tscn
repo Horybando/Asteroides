@@ -200,6 +200,13 @@ collision_layer = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDeteccion" index="0"]
 shape = SubResource( 5 )
 
+[node name="BarraSalud" parent="." index="8"]
+margin_left = -89.1276
+margin_top = 56.3969
+margin_right = 22.8724
+margin_bottom = 70.3969
+percent_visible = false
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="body_entered" from="AreaDisparo" to="." method="_on_AreaDisparo_body_entered"]
 [connection signal="body_exited" from="AreaDisparo" to="." method="_on_AreaDisparo_body_exited"]
