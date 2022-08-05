@@ -201,7 +201,7 @@ tracks/2/keys = {
 "values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=4]
 resource_name = "super_activada"
 loop = true
 tracks/0/type = "value"
@@ -352,7 +352,9 @@ tracks/11/keys = {
 [sub_resource type="CircleShape2D" id=5]
 radius = 574.757
 
-[node name="ReleMasa" type="Node2D"]
+[node name="ReleMasa" type="Node2D" groups=[
+"minimapa",
+]]
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 7 )
 
@@ -376,7 +378,7 @@ autoplay = "spawn"
 anims/activada = SubResource( 1 )
 anims/default = SubResource( 2 )
 anims/spawn = SubResource( 3 )
-anims/super_activada = SubResource( 6 )
+anims/super_activada = SubResource( 4 )
 
 [node name="Tween" type="Tween" parent="."]
 

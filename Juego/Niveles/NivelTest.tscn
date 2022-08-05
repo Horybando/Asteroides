@@ -18,7 +18,7 @@
 
 [node name="NivelTest" type="Node2D"]
 script = ExtResource( 3 )
-tiempo_limite = 30
+tiempo_limite = 120
 explosion = ExtResource( 4 )
 meteorito = ExtResource( 6 )
 explosion_meteorito = ExtResource( 5 )
@@ -37,15 +37,22 @@ numero_peligros = 3
 
 [node name="ContenedorEstaciones" type="Node" parent="."]
 
-[node name="EstacionRecarga" parent="ContenedorEstaciones" instance=ExtResource( 11 )]
-position = Vector2( 1054.51, 441.872 )
+[node name="EstacionRecarga" parent="ContenedorEstaciones" groups=[
+"minimapa",
+] instance=ExtResource( 11 )]
+position = Vector2( 2644.08, 390.96 )
+
+[node name="EstacionRecarga2" parent="ContenedorEstaciones" groups=[
+"minimapa",
+] instance=ExtResource( 11 )]
+position = Vector2( -766.064, 1140.11 )
 
 [node name="TriggersInterceptores" type="Node" parent="."]
 
 [node name="SectorDePeligro" parent="TriggersInterceptores" instance=ExtResource( 7 )]
-position = Vector2( 372.497, 1321.84 )
+position = Vector2( 1384.33, 423.272 )
 tipo_peligro = "Enemigo"
-numero_peligros = 2
+numero_peligros = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 2 )
@@ -183,8 +190,15 @@ hitpoints = 30.0
 
 [node name="ContenedorBasesEnemigas" type="Node" parent="."]
 
-[node name="BaseEnemiga" parent="ContenedorBasesEnemigas" instance=ExtResource( 13 )]
+[node name="BaseEnemiga" parent="ContenedorBasesEnemigas" groups=[
+"minimapa",
+] instance=ExtResource( 13 )]
 position = Vector2( 2592.48, 1510.87 )
+
+[node name="BaseEnemiga2" parent="ContenedorBasesEnemigas" groups=[
+"minimapa",
+] instance=ExtResource( 13 )]
+position = Vector2( 1597.6, -317.065 )
 
 [connection signal="tween_completed" from="TweenCamara" to="." method="_on_TweenCamara_tween_completed"]
 [connection signal="timeout" from="RestartTimer" to="." method="_on_RestartTimer_timeout"]

@@ -22,6 +22,9 @@ func _on_nave_destruida(nave: NaveBase, _posicion, _explosiones) -> void:
 	if nave is Player:
 		player_objetivo = null
 		
+	if nave.is_in_group("minimapa"):
+		Eventos.emit_signal("minimapa_objeto_destruido", nave)
+		
 func rotar_hacia_player() -> void:
 	if player_objetivo:
 		dir_player = player_objetivo.global_position - global_position

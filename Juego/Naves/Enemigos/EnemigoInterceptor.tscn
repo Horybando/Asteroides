@@ -145,7 +145,9 @@ radius = 500.0
 [sub_resource type="CircleShape2D" id=5]
 radius = 500.0
 
-[node name="EnemigoInterceptor" instance=ExtResource( 1 )]
+[node name="EnemigoInterceptor" groups=[
+"minimapa",
+] instance=ExtResource( 1 )]
 z_index = 50
 z_as_relative = false
 input_pickable = true
@@ -156,6 +158,7 @@ gravity_scale = 0.0
 contacts_reported = 2
 contact_monitor = true
 script = ExtResource( 2 )
+hitpoints = 10.0
 
 [node name="Sprite" parent="." index="0"]
 rotation = -1.5708
