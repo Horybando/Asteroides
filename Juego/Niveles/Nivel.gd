@@ -8,14 +8,15 @@ var meteoritos_totales:int = 0
 var numero_bases_enemigas = 0
 
 ## Atributos Export
+export(String, FILE, "*.tscn") var prox_nivel = ""
 export var musica_nivel:AudioStream = null
 export var musica_combate:AudioStream = null
 export var tiempo_limite:int = 10
+export var tiempo_transicion_camara:float = 2.0
 export var explosion:PackedScene = null
 export var meteorito:PackedScene = null
 export var explosion_meteorito:PackedScene = null
 export var sector_meteoritos:PackedScene = null
-export var tiempo_transicion_camara:float = 2.0
 export var enemigo_interceptor:PackedScene = null
 export var rele_masa: PackedScene = null
 
@@ -62,6 +63,7 @@ func conectar_seniales() -> void:
 	Eventos.connect("meteorito_destruido", self, "_on_meteorito_destruido")
 	Eventos.connect("base_destruida", self, "_on_base_destruida")
 	Eventos.connect("spawn_orbital", self, "_on_spawn_orbital")
+	Eventos.connect("nivel_completado", self, "_on_nivel_completado")
 	
 func crear_posicion_aleatoria(rango_horizontal: float, rango_vertical: float) -> Vector2:
 	randomize()
@@ -214,7 +216,11 @@ func crear_rele() -> void:
 		
 	new_rele_masa.global_position = player.global_position + (margen + pos_aleatoria)
 	add_child(new_rele_masa)
-	
+
+func _on_nivel_completado() -> void:
+	Eventos.emit_signal("nivel_terminado")
+	yield(get_tree().create_timer(1.0),"timeout")
+	get_tree().change_scene(prox_nivel)
 
 ## Señales internas
 func _on_TweenCamara_tween_completed(object: Object, _key: NodePath) -> void:

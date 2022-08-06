@@ -1,0 +1,62 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Juego/Naves/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://default_env.tres" type="Environment" id=2]
+[ext_resource path="res://Juego/Niveles/Nivel.gd" type="Script" id=3]
+[ext_resource path="res://Juego/Explosion/Explosion.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Juego/Explosion/ExplosionMeteorito.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Juego/Meteorito/Meteorito.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Juego/Niveles/Fondos/StarFieldBackground.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Juego/Meteorito/SectorMeteoritos.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Juego/Niveles/CamaraJuego.gd" type="Script" id=10]
+[ext_resource path="res://Juego/Naves/Enemigos/EnemigoInterceptor.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Juego/Estacion/Rele.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Juego/UI/HUD.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Juego/Niveles/Musica/Nivel/POL-across-the-skies-short.wav" type="AudioStream" id=16]
+[ext_resource path="res://Juego/Niveles/Musica/Combate/POL-fly-hunter-short.wav" type="AudioStream" id=17]
+
+[node name="NivelBase" type="Node2D"]
+script = ExtResource( 3 )
+musica_nivel = ExtResource( 16 )
+musica_combate = ExtResource( 17 )
+tiempo_limite = 120
+explosion = ExtResource( 4 )
+meteorito = ExtResource( 6 )
+explosion_meteorito = ExtResource( 5 )
+sector_meteoritos = ExtResource( 9 )
+enemigo_interceptor = ExtResource( 12 )
+rele_masa = ExtResource( 14 )
+
+[node name="HUD" parent="." instance=ExtResource( 15 )]
+
+[node name="TriggersInterceptores" type="Node" parent="."]
+
+[node name="TriggersLluviaMeteoritos" type="Node" parent="."]
+
+[node name="ContenedorBasesEnemigas" type="Node" parent="."]
+
+[node name="ContenedorEstaciones" type="Node" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 2 )
+
+[node name="CamaraNivel" type="Camera2D" parent="."]
+script = ExtResource( 10 )
+
+[node name="TweenZoom" type="Tween" parent="CamaraNivel"]
+
+[node name="TweenCamara" type="Tween" parent="."]
+
+[node name="RestartTimer" type="Timer" parent="."]
+
+[node name="ActualizadorTimer" type="Timer" parent="."]
+
+[node name="StarFieldBackground" parent="." instance=ExtResource( 7 )]
+
+[node name="Navecita" parent="." instance=ExtResource( 1 )]
+position = Vector2( 209.096, 98.9474 )
+hitpoints = 30.0
+
+[connection signal="tween_completed" from="TweenCamara" to="." method="_on_TweenCamara_tween_completed"]
+[connection signal="timeout" from="RestartTimer" to="." method="_on_RestartTimer_timeout"]
+[connection signal="timeout" from="ActualizadorTimer" to="." method="_on_ActualizadorTimer_timeout"]
