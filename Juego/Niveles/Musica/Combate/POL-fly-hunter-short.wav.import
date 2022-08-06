@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/POL-fly-hunter-short.wav-f652757321ca7ab1b2c8c0303250efd6.sample"
+
+[deps]
+
+source_file="res://Juego/Niveles/Musica/Combate/POL-fly-hunter-short.wav"
+dest_files=[ "res://.import/POL-fly-hunter-short.wav-f652757321ca7ab1b2c8c0303250efd6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

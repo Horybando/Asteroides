@@ -159,13 +159,14 @@ _global_script_class_icons={
 [application]
 
 config/name="Asteroides"
-run/main_scene="res://Juego/Niveles/NivelTest.tscn"
+run/main_scene="res://Juego/Niveles/MenuPrincipal.tscn"
 config/icon="res://icono.png"
 
 [autoload]
 
 Eventos="*res://Juego/Autoloads/Eventos.gd"
 DatosJuego="*res://Juego/Autoloads/DatosJuego.gd"
+MusicaJuego="*res://Juego/Autoloads/MusicaJuego.tscn"
 
 [display]
 

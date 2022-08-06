@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/POL-galactic-chase-short.wav-3c83bf217640e151bbcc7ea58a0d3c96.sample"
+
+[deps]
+
+source_file="res://Juego/Niveles/Musica/Nivel/POL-galactic-chase-short.wav"
+dest_files=[ "res://.import/POL-galactic-chase-short.wav-3c83bf217640e151bbcc7ea58a0d3c96.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

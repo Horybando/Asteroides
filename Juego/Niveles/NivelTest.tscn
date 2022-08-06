@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Juego/Naves/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://default_env.tres" type="Environment" id=2]
@@ -15,9 +15,13 @@
 [ext_resource path="res://Juego/Estacion/BaseEnemiga.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Juego/Estacion/Rele.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Juego/UI/HUD.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Juego/Niveles/Musica/Nivel/POL-across-the-skies-short.wav" type="AudioStream" id=16]
+[ext_resource path="res://Juego/Niveles/Musica/Combate/POL-fly-hunter-short.wav" type="AudioStream" id=17]
 
 [node name="NivelTest" type="Node2D"]
 script = ExtResource( 3 )
+musica_nivel = ExtResource( 16 )
+musica_combate = ExtResource( 17 )
 tiempo_limite = 120
 explosion = ExtResource( 4 )
 meteorito = ExtResource( 6 )
@@ -31,7 +35,7 @@ rele_masa = ExtResource( 14 )
 [node name="TriggersLluviaMeteoritos" type="Node" parent="."]
 
 [node name="SectorDePeligro" parent="TriggersLluviaMeteoritos" instance=ExtResource( 7 )]
-position = Vector2( 1184.45, 1367.08 )
+position = Vector2( 1158.19, 77.084 )
 audio_bus_name = "SFX"
 numero_peligros = 3
 
@@ -50,7 +54,7 @@ position = Vector2( -766.064, 1140.11 )
 [node name="TriggersInterceptores" type="Node" parent="."]
 
 [node name="SectorDePeligro" parent="TriggersInterceptores" instance=ExtResource( 7 )]
-position = Vector2( 1384.33, 423.272 )
+position = Vector2( 2333.84, -394.678 )
 tipo_peligro = "Enemigo"
 numero_peligros = 1
 
@@ -198,7 +202,7 @@ position = Vector2( 2592.48, 1510.87 )
 [node name="BaseEnemiga2" parent="ContenedorBasesEnemigas" groups=[
 "minimapa",
 ] instance=ExtResource( 13 )]
-position = Vector2( 1597.6, -317.065 )
+position = Vector2( 3187.74, -391.424 )
 
 [connection signal="tween_completed" from="TweenCamara" to="." method="_on_TweenCamara_tween_completed"]
 [connection signal="timeout" from="RestartTimer" to="." method="_on_RestartTimer_timeout"]

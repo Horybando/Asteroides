@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/menu.ogg-8e7967d8cdf9d72083190bad99da76ce.oggstr"
+
+[deps]
+
+source_file="res://Juego/Niveles/Musica/menu.ogg"
+dest_files=[ "res://.import/menu.ogg-8e7967d8cdf9d72083190bad99da76ce.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
