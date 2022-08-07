@@ -11,6 +11,7 @@
 prox_nivel = "res://Juego/Niveles/Nivel4.tscn"
 musica_nivel = ExtResource( 5 )
 musica_combate = ExtResource( 6 )
+tiempo_limite = 180
 
 [node name="SectorDePeligro" parent="TriggersInterceptores" index="0" instance=ExtResource( 3 )]
 position = Vector2( 2100.09, 355.029 )
@@ -23,26 +24,23 @@ tipo_peligro = "Enemigo"
 numero_peligros = 1
 
 [node name="SectorDePeligro3" parent="TriggersLluviaMeteoritos" index="0" instance=ExtResource( 3 )]
-position = Vector2( 565.281, 2607.11 )
+position = Vector2( 831.664, 2083.86 )
 numero_peligros = 5
 
 [node name="BaseEnemiga" parent="ContenedorBasesEnemigas" index="0" groups=[
 "minimapa",
 ] instance=ExtResource( 4 )]
 position = Vector2( 306.89, 1203.49 )
-hitpoints = 15.0
 
 [node name="BaseEnemiga2" parent="ContenedorBasesEnemigas" index="1" groups=[
 "minimapa",
 ] instance=ExtResource( 4 )]
 position = Vector2( 3592.42, 457.326 )
-hitpoints = 15.0
 
 [node name="BaseEnemiga3" parent="ContenedorBasesEnemigas" index="2" groups=[
 "minimapa",
 ] instance=ExtResource( 4 )]
 position = Vector2( 2316.72, 1889.48 )
-hitpoints = 15.0
 
 [node name="EstacionRecarga" parent="ContenedorEstaciones" index="0" groups=[
 "minimapa",

@@ -36,25 +36,21 @@ numero_peligros = 6
 "minimapa",
 ] instance=ExtResource( 2 )]
 position = Vector2( -527.404, 1492.31 )
-hitpoints = 15.0
 
 [node name="BaseEnemiga2" parent="ContenedorBasesEnemigas" index="1" groups=[
 "minimapa",
 ] instance=ExtResource( 2 )]
 position = Vector2( 3607.92, 1066.79 )
-hitpoints = 15.0
 
 [node name="BaseEnemiga3" parent="ContenedorBasesEnemigas" index="2" groups=[
 "minimapa",
 ] instance=ExtResource( 2 )]
 position = Vector2( 2061.67, 1881.87 )
-hitpoints = 15.0
 
 [node name="BaseEnemiga4" parent="ContenedorBasesEnemigas" index="3" groups=[
 "minimapa",
 ] instance=ExtResource( 2 )]
 position = Vector2( 3049.05, -375.187 )
-hitpoints = 15.0
 
 [node name="EstacionRecarga" parent="ContenedorEstaciones" index="0" groups=[
 "minimapa",

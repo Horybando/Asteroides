@@ -161,7 +161,7 @@ gravity_scale = 0.0
 contacts_reported = 2
 contact_monitor = true
 script = ExtResource( 2 )
-hitpoints = 15.0
+hitpoints = 10.0
 
 [node name="Sprite" parent="." index="0"]
 rotation = -1.5708

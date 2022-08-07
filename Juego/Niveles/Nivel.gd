@@ -58,7 +58,7 @@ func conectar_seniales() -> void:
 	Eventos.connect("nave_destruida", self, "_on_nave_destruida")
 	Eventos.connect("nave_en_sector_peligro", self, "_on_nave_en_sector_peligro")
 # warning-ignore:return_value_discarded
-	Eventos.connect("spawn_meteorito", self, "_on_spawn_meteoritos")
+	Eventos.connect("spawn_meteorito", self, "_on_spawn_meteorito")
 	Eventos.connect("meteorito_destruido", self, "_on_meteorito_destruido")
 	Eventos.connect("base_destruida", self, "_on_base_destruida")
 	Eventos.connect("spawn_orbital", self, "_on_spawn_orbital")
@@ -123,8 +123,7 @@ func crear_explosion(posicion: Vector2, numero: int = 1, intervalo: float = 0.0,
 		add_child(new_explosion)
 		yield(get_tree().create_timer(0.6),"timeout")
 		
-func _on_spawn_meteoritos(pos_spawn: Vector2, dir_meteorito: Vector2, 
-tamanio: float) -> void:
+func _on_spawn_meteorito(pos_spawn: Vector2, dir_meteorito: Vector2, tamanio: float) -> void:
 	var new_meteorito:Meteorito = meteorito.instance()
 	new_meteorito.crear(
 	pos_spawn,

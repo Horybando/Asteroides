@@ -4,9 +4,9 @@ extends Node2D
 
 ## Atributos export
 export var cantidad_meteoritos:int = 10
-export var intervalo_spawn:float = 0.5
+export var intervalo_spawn:float = 1.0
 
-##Atributos
+## Atributos
 var spawners:Array
 
 ## Constructor

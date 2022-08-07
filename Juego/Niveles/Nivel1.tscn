@@ -21,3 +21,4 @@ hitpoints = 10.0
 
 [node name="Navecita" parent="." index="11"]
 position = Vector2( 936.451, 440.176 )
+hitpoints = 100.0

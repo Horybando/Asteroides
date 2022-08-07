@@ -12,17 +12,12 @@ musica_nivel = ExtResource( 2 )
 tiempo_limite = 240
 
 [node name="SectorDePeligro" parent="TriggersInterceptores" index="0" instance=ExtResource( 4 )]
-position = Vector2( -1293.86, -1017.96 )
+position = Vector2( -1597.86, -1433.96 )
 tipo_peligro = "Enemigo"
 numero_peligros = 3
 
 [node name="SectorDePeligro2" parent="TriggersInterceptores" index="1" instance=ExtResource( 4 )]
 position = Vector2( 2521.12, 1693.43 )
-tipo_peligro = "Enemigo"
-numero_peligros = 3
-
-[node name="SectorDePeligro3" parent="TriggersInterceptores" index="2" instance=ExtResource( 4 )]
-position = Vector2( 19.0273, 2102.52 )
 tipo_peligro = "Enemigo"
 numero_peligros = 3
 

@@ -45,6 +45,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		escudo.activar()
 	elif event.is_action_pressed("escudo") and escudo.get_esta_activado():
 		escudo.desactivar()
+		
 	
 	# Control estela y sonido motor
 	if event.is_action_pressed("mover_adelante"):

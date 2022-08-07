@@ -26,6 +26,7 @@ func set_esta_en_sector(valor: bool) -> void:
 ## Constructor
 func crear(pos: Vector2, dir: Vector2, tamanio: float) -> void:
 	position = pos
+	pos_spawn_original = position
 	#Calcular masa, tamaño de sprite y de colisionador
 	mass *= tamanio
 	$Sprite.scale = Vector2.ONE * tamanio

@@ -39,19 +39,19 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=3]
 size = 25
 outline_size = 2
 outline_color = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
 font_data = ExtResource( 7 )
 
-[sub_resource type="StyleBoxFlat" id=10]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.0470588, 0.721569, 0.109804, 1 )
 
-[sub_resource type="StyleBoxFlat" id=11]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.933333, 0.054902, 0.054902, 1 )
 
-[sub_resource type="DynamicFont" id=12]
+[sub_resource type="DynamicFont" id=6]
 size = 23
 outline_size = 2
 outline_color = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
@@ -140,7 +140,7 @@ margin_left = 3.19946
 margin_top = 10.1955
 margin_right = 264.199
 margin_bottom = 43.1955
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 3 )
 text = "energia laser"
 
 [node name="ProgressBar" parent="InfoLaser" index="3"]
@@ -148,13 +148,14 @@ margin_left = -115.5
 margin_top = -38.0
 margin_right = 110.5
 margin_bottom = -14.0
-custom_styles/fg = SubResource( 10 )
-custom_styles/bg = SubResource( 11 )
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 5 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
 
 [node name="InfoEscudo" parent="." groups=[
 "contenedor_info",
 ] instance=ExtResource( 4 )]
+modulate = Color( 1, 1, 1, 0 )
 margin_top = -179.0
 margin_bottom = -91.0
 texture = ExtResource( 5 )
@@ -164,7 +165,7 @@ margin_left = 3.36999
 margin_top = 7.0
 margin_right = 264.37
 margin_bottom = 38.0
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 6 )
 text = "energia escudo"
 
 [node name="ProgressBar" parent="InfoEscudo" index="3" groups=[

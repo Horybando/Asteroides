@@ -199,6 +199,8 @@ shape = SubResource( 4 )
 
 [node name="DetectorIzquierda" type="Area2D" parent="DetectorFueraZona"]
 position = Vector2( -1400, 0 )
+collision_layer = 0
+collision_mask = 4
 __meta__ = {
 "_edit_group_": true
 }
@@ -209,6 +211,8 @@ shape = SubResource( 5 )
 
 [node name="DetectorDerecha" type="Area2D" parent="DetectorFueraZona"]
 position = Vector2( 1400, 0 )
+collision_layer = 0
+collision_mask = 4
 __meta__ = {
 "_edit_group_": true
 }
@@ -219,6 +223,8 @@ shape = SubResource( 6 )
 
 [node name="DetectorSuperior" type="Area2D" parent="DetectorFueraZona"]
 position = Vector2( 0, -900 )
+collision_layer = 0
+collision_mask = 4
 __meta__ = {
 "_edit_group_": true
 }
@@ -229,6 +235,8 @@ shape = SubResource( 7 )
 
 [node name="DetectorInferior" type="Area2D" parent="DetectorFueraZona"]
 position = Vector2( 0, 900 )
+collision_layer = 0
+collision_mask = 4
 __meta__ = {
 "_edit_group_": true
 }
@@ -269,7 +277,7 @@ direccion = Vector2( -2, 1 )
 
 [node name="MeteoritoSpawner8" parent="Spawners" instance=ExtResource( 1 )]
 position = Vector2( 1150, 720 )
-direccion = Vector2( -2, 1 )
+direccion = Vector2( -2, -1 )
 
 [node name="MeteoritoSpawner9" parent="Spawners" instance=ExtResource( 1 )]
 position = Vector2( 1150, -360 )
@@ -310,6 +318,7 @@ direccion = Vector2( -2, -1 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
 modulate = Color( 0.960784, 0.878431, 0.878431, 0.141176 )
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -319,6 +328,7 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="CanvasLayer/ColorRect"]
+visible = false
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5

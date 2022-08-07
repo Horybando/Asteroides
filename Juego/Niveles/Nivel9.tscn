@@ -20,23 +20,18 @@ tipo_peligro = "Enemigo"
 numero_peligros = 4
 
 [node name="SectorDePeligro2" parent="TriggersInterceptores" index="1" instance=ExtResource( 3 )]
-position = Vector2( 119.081, -2024.38 )
-tipo_peligro = "Enemigo"
-numero_peligros = 4
-
-[node name="SectorDePeligro3" parent="TriggersInterceptores" index="2" instance=ExtResource( 3 )]
-position = Vector2( 374.255, 2415.64 )
+position = Vector2( 5018.41, 799.537 )
 tipo_peligro = "Enemigo"
 numero_peligros = 4
 
 [node name="SectorDePeligro2" parent="TriggersLluviaMeteoritos" index="0" instance=ExtResource( 3 )]
-position = Vector2( 3317.25, -952.647 )
+position = Vector2( 1514.03, -918.624 )
 
 [node name="SectorDePeligro3" parent="TriggersLluviaMeteoritos" index="1" instance=ExtResource( 3 )]
 position = Vector2( 1956.33, 1428.97 )
 
 [node name="SectorDePeligro4" parent="TriggersLluviaMeteoritos" index="2" instance=ExtResource( 3 )]
-position = Vector2( 1752.19, -901.613 )
+position = Vector2( -4099.78, 1003.68 )
 
 [node name="BaseEnemiga" parent="ContenedorBasesEnemigas" index="0" groups=[
 "minimapa",
