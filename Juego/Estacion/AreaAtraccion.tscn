@@ -14,6 +14,7 @@ collision_layer = 0
 script = ExtResource( 2 )
 
 [node name="SpriteZonaRecarga" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.258824 )
 scale = Vector2( 8, 9 )
 texture = ExtResource( 1 )
 

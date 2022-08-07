@@ -5,6 +5,7 @@
 
 [node name="MotorSFX" type="AudioStreamPlayer2D"]
 stream = ExtResource( 1 )
+volume_db = 2.0
 bus = "SFX"
 script = ExtResource( 2 )
 

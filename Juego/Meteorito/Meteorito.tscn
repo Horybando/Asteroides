@@ -418,6 +418,7 @@ texture = ExtResource( 1 )
 
 [node name="ImpactosSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = 4.0
 bus = "SFX"
 
 [node name="Impactos" type="AnimationPlayer" parent="."]

@@ -9,4 +9,7 @@ prox_nivel = "res://Juego/Niveles/Nivel2.tscn"
 [node name="BaseEnemiga" parent="ContenedorBasesEnemigas" index="0" groups=[
 "minimapa",
 ] instance=ExtResource( 2 )]
-position = Vector2( 1907.49, 294.923 )
+position = Vector2( 1658.59, 1799.65 )
+
+[node name="Navecita" parent="." index="11"]
+position = Vector2( 936.451, 440.176 )

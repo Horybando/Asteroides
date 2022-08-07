@@ -346,7 +346,7 @@ anims/default = SubResource( 11 )
 
 [node name="AdvertenciaSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
-volume_db = -57.1429
+volume_db = -10.0
 bus = "SFX"
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
