@@ -1,15 +1,23 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Juego/Niveles/NivelBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Juego/Estacion/BaseEnemiga.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Juego/Niveles/Peligros/SectorDePeligro.tscn" type="PackedScene" id=3]
 
 [node name="Nivel1" instance=ExtResource( 1 )]
 prox_nivel = "res://Juego/Niveles/Nivel2.tscn"
+tiempo_limite = 90
+
+[node name="SectorDePeligro" parent="TriggersInterceptores" index="0" instance=ExtResource( 3 )]
+position = Vector2( 1936.8, 1153.98 )
+tipo_peligro = "Enemigo"
+numero_peligros = 1
 
 [node name="BaseEnemiga" parent="ContenedorBasesEnemigas" index="0" groups=[
 "minimapa",
 ] instance=ExtResource( 2 )]
-position = Vector2( 1658.59, 1799.65 )
+position = Vector2( 3137.59, 1389.45 )
+hitpoints = 10.0
 
 [node name="Navecita" parent="." index="11"]
 position = Vector2( 936.451, 440.176 )

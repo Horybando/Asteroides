@@ -1,20 +1,53 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Juego/Niveles/NivelBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Juego/Estacion/BaseEnemiga.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Juego/Niveles/Peligros/SectorDePeligro.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Juego/Estacion/EstacionRecarga.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Juego/Niveles/Musica/Nivel/POL-combat-plan-short.wav" type="AudioStream" id=5]
+[ext_resource path="res://Juego/Niveles/Musica/Combate/POL-galaxy-force-short.wav" type="AudioStream" id=6]
 
 [node name="Nivel2" instance=ExtResource( 1 )]
-prox_nivel = "res://Juego/Niveles/MenuVictoria.tscn"
+prox_nivel = "res://Juego/Niveles/Nivel3.tscn"
+musica_nivel = ExtResource( 5 )
+musica_combate = ExtResource( 6 )
+
+[node name="SectorDePeligro" parent="TriggersInterceptores" index="0" instance=ExtResource( 3 )]
+position = Vector2( 2058.51, 343.086 )
+tipo_peligro = "Enemigo"
+numero_peligros = 1
+
+[node name="SectorDePeligro2" parent="TriggersInterceptores" index="1" instance=ExtResource( 3 )]
+position = Vector2( 1708.7, 1479.98 )
+tipo_peligro = "Enemigo"
+numero_peligros = 1
 
 [node name="BaseEnemiga" parent="ContenedorBasesEnemigas" index="0" groups=[
 "minimapa",
 ] instance=ExtResource( 2 )]
 position = Vector2( 3034.3, 584.824 )
+hitpoints = 10.0
+
+[node name="BaseEnemiga2" parent="ContenedorBasesEnemigas" index="1" groups=[
+"minimapa",
+] instance=ExtResource( 2 )]
+position = Vector2( 885.895, 1852.47 )
+hitpoints = 10.0
+
+[node name="EstacionRecarga" parent="ContenedorEstaciones" index="0" groups=[
+"minimapa",
+] instance=ExtResource( 4 )]
+position = Vector2( 2750.89, 1905.85 )
+radio_energia_entregada = 0.1
 
 [node name="StarFieldBackground" parent="." index="10"]
 color_fondo = Color( 0.168627, 0.156863, 0.156863, 1 )
 
 [node name="ColorRect" parent="StarFieldBackground" index="0"]
+anchor_left = 0.00276248
+anchor_top = -0.00491107
+anchor_right = 1.00276
+anchor_bottom = 0.995089
 color = Color( 0.168627, 0.156863, 0.156863, 1 )
 
 [node name="StarField" parent="StarFieldBackground/EstrellasCercanas" index="0"]

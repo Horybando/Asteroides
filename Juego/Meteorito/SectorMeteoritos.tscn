@@ -311,13 +311,8 @@ direccion = Vector2( -2, -1 )
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 modulate = Color( 0.960784, 0.878431, 0.878431, 0.141176 )
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -959.04
-margin_top = -1080.0
-margin_right = 959.04
 color = Color( 0.882353, 0.243137, 0.0941176, 1 )
 __meta__ = {
 "_edit_use_anchors_": false

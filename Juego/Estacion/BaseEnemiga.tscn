@@ -123,9 +123,9 @@ border_blend = true
 z_index = 50
 z_as_relative = false
 script = ExtResource( 6 )
-hitpoints = 10.0
+hitpoints = 20.0
 orbital = ExtResource( 8 )
-numero_orbitales = 4
+numero_orbitales = 5
 rutas = [ ExtResource( 12 ), ExtResource( 11 ), ExtResource( 10 ) ]
 
 [node name="Sprites" type="Node2D" parent="."]

@@ -39,7 +39,8 @@ can_sleep = false
 linear_damp = 1.5
 angular_damp = 4.5
 script = ExtResource( 9 )
-potencia_rotacion = 150
+hitpoints = 100.0
+potencia_rotacion = 140
 
 [node name="InicioEstela" parent="." index="0" instance=ExtResource( 2 )]
 show_behind_parent = true

@@ -1,0 +1,118 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Juego/Niveles/NivelBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Juego/Estacion/BaseEnemiga.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Juego/Niveles/Peligros/SectorDePeligro.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Juego/Estacion/EstacionRecarga.tscn" type="PackedScene" id=4]
+
+[node name="Nivel10" instance=ExtResource( 1 )]
+prox_nivel = "res://Juego/Niveles/MenuVictoria.tscn"
+tiempo_limite = 300
+
+[node name="SectorDePeligro" parent="TriggersInterceptores" index="0" instance=ExtResource( 3 )]
+position = Vector2( 3160.85, -538.782 )
+tipo_peligro = "Enemigo"
+numero_peligros = 5
+
+[node name="SectorDePeligro2" parent="TriggersInterceptores" index="1" instance=ExtResource( 3 )]
+position = Vector2( -1167.36, 2298.8 )
+tipo_peligro = "Enemigo"
+numero_peligros = 5
+
+[node name="SectorDePeligro2" parent="TriggersLluviaMeteoritos" index="0" instance=ExtResource( 3 )]
+position = Vector2( -2424.52, 466.944 )
+
+[node name="SectorDePeligro3" parent="TriggersLluviaMeteoritos" index="1" instance=ExtResource( 3 )]
+position = Vector2( 1813.9, 2352.68 )
+
+[node name="SectorDePeligro4" parent="TriggersLluviaMeteoritos" index="2" instance=ExtResource( 3 )]
+position = Vector2( -915.929, -2011.45 )
+
+[node name="BaseEnemiga" parent="ContenedorBasesEnemigas" index="0" groups=[
+"minimapa",
+] instance=ExtResource( 2 )]
+position = Vector2( -1167.36, -736.335 )
+
+[node name="BaseEnemiga2" parent="ContenedorBasesEnemigas" index="1" groups=[
+"minimapa",
+] instance=ExtResource( 2 )]
+position = Vector2( 2137.17, 3520.04 )
+
+[node name="BaseEnemiga3" parent="ContenedorBasesEnemigas" index="2" groups=[
+"minimapa",
+] instance=ExtResource( 2 )]
+position = Vector2( -2765.75, 3089.02 )
+
+[node name="BaseEnemiga4" parent="ContenedorBasesEnemigas" index="3" groups=[
+"minimapa",
+] instance=ExtResource( 2 )]
+position = Vector2( 4130.66, 2963.3 )
+
+[node name="BaseEnemiga5" parent="ContenedorBasesEnemigas" index="4" groups=[
+"minimapa",
+] instance=ExtResource( 2 )]
+position = Vector2( -2675.95, -2424.52 )
+
+[node name="BaseEnemiga6" parent="ContenedorBasesEnemigas" index="5" groups=[
+"minimapa",
+] instance=ExtResource( 2 )]
+position = Vector2( 3106.97, -1975.53 )
+
+[node name="BaseEnemiga7" parent="ContenedorBasesEnemigas" index="6" groups=[
+"minimapa",
+] instance=ExtResource( 2 )]
+position = Vector2( 484.904, -2244.92 )
+
+[node name="BaseEnemiga8" parent="ContenedorBasesEnemigas" index="7" groups=[
+"minimapa",
+] instance=ExtResource( 2 )]
+position = Vector2( -3606.36, 0 )
+
+[node name="BaseEnemiga9" parent="ContenedorBasesEnemigas" index="8" groups=[
+"minimapa",
+] instance=ExtResource( 2 )]
+position = Vector2( 4304.82, -71.272 )
+
+[node name="BaseEnemiga10" parent="ContenedorBasesEnemigas" index="9" groups=[
+"minimapa",
+] instance=ExtResource( 2 )]
+position = Vector2( -85.5264, 3349.78 )
+
+[node name="EstacionRecarga" parent="ContenedorEstaciones" index="0" groups=[
+"minimapa",
+] instance=ExtResource( 4 )]
+position = Vector2( 3484.12, 2029.41 )
+
+[node name="EstacionRecarga2" parent="ContenedorEstaciones" index="1" groups=[
+"minimapa",
+] instance=ExtResource( 4 )]
+position = Vector2( 1849.82, -2101.25 )
+
+[node name="EstacionRecarga3" parent="ContenedorEstaciones" index="2" groups=[
+"minimapa",
+] instance=ExtResource( 4 )]
+position = Vector2( -2693.91, -1041.64 )
+
+[node name="EstacionRecarga4" parent="ContenedorEstaciones" index="3" groups=[
+"minimapa",
+] instance=ExtResource( 4 )]
+position = Vector2( -3089.02, 1742.06 )
+
+[node name="StarFieldBackground" parent="." index="10"]
+color_fondo = Color( 0.662745, 0.431373, 0.0666667, 1 )
+
+[node name="ColorRect" parent="StarFieldBackground" index="0"]
+color = Color( 0.662745, 0.431373, 0.0666667, 1 )
+
+[node name="StarField" parent="StarFieldBackground/EstrellasCercanas" index="0"]
+modulate = Color( 0.027451, 0.027451, 0.027451, 1 )
+amount = 10
+
+[node name="StarField" parent="StarFieldBackground/EstrellasMedias" index="0"]
+amount = 12
+
+[node name="StarField" parent="StarFieldBackground/EstrellasLejanas" index="0"]
+modulate = Color( 0.458824, 0.027451, 0.0901961, 1 )
+amount = 14
+
+[editable path="StarFieldBackground"]

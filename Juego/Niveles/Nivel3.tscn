@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Juego/Niveles/NivelBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Juego/Estacion/EstacionRecarga.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Juego/Niveles/Peligros/SectorDePeligro.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Juego/Estacion/BaseEnemiga.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Juego/Niveles/Musica/Nivel/POL-flight-master-short.wav" type="AudioStream" id=5]
+[ext_resource path="res://Juego/Niveles/Musica/Combate/POL-reckless-getaway-short.wav" type="AudioStream" id=6]
+
+[node name="Nivel3" instance=ExtResource( 1 )]
+prox_nivel = "res://Juego/Niveles/Nivel4.tscn"
+musica_nivel = ExtResource( 5 )
+musica_combate = ExtResource( 6 )
+
+[node name="SectorDePeligro" parent="TriggersInterceptores" index="0" instance=ExtResource( 3 )]
+position = Vector2( 2100.09, 355.029 )
+tipo_peligro = "Enemigo"
+numero_peligros = 1
+
+[node name="SectorDePeligro2" parent="TriggersInterceptores" index="1" instance=ExtResource( 3 )]
+position = Vector2( 2599.54, 1402.07 )
+tipo_peligro = "Enemigo"
+numero_peligros = 1
+
+[node name="SectorDePeligro3" parent="TriggersLluviaMeteoritos" index="0" instance=ExtResource( 3 )]
+position = Vector2( 565.281, 2607.11 )
+numero_peligros = 5
+
+[node name="BaseEnemiga" parent="ContenedorBasesEnemigas" index="0" groups=[
+"minimapa",
+] instance=ExtResource( 4 )]
+position = Vector2( 306.89, 1203.49 )
+hitpoints = 15.0
+
+[node name="BaseEnemiga2" parent="ContenedorBasesEnemigas" index="1" groups=[
+"minimapa",
+] instance=ExtResource( 4 )]
+position = Vector2( 3592.42, 457.326 )
+hitpoints = 15.0
+
+[node name="BaseEnemiga3" parent="ContenedorBasesEnemigas" index="2" groups=[
+"minimapa",
+] instance=ExtResource( 4 )]
+position = Vector2( 2316.72, 1889.48 )
+hitpoints = 15.0
+
+[node name="EstacionRecarga" parent="ContenedorEstaciones" index="0" groups=[
+"minimapa",
+] instance=ExtResource( 2 )]
+position = Vector2( 3454.02, 1462.24 )
+
+[node name="StarFieldBackground" parent="." index="10"]
+color_fondo = Color( 0.156863, 0.121569, 0.305882, 1 )
+
+[node name="ColorRect" parent="StarFieldBackground" index="0"]
+color = Color( 0.156863, 0.121569, 0.305882, 1 )
+
+[node name="StarField" parent="StarFieldBackground/EstrellasCercanas" index="0"]
+modulate = Color( 0.458824, 0.027451, 0.0901961, 1 )
+amount = 10
+
+[node name="StarField" parent="StarFieldBackground/EstrellasMedias" index="0"]
+modulate = Color( 0.458824, 0.027451, 0.0901961, 1 )
+amount = 10
+
+[node name="StarField" parent="StarFieldBackground/EstrellasLejanas" index="0"]
+modulate = Color( 0.458824, 0.027451, 0.0901961, 1 )
+amount = 10
+
+[editable path="StarFieldBackground"]
