@@ -56,6 +56,8 @@ script = ExtResource( 10 )
 
 [node name="Navecita" parent="." instance=ExtResource( 1 )]
 position = Vector2( 209.096, 98.9474 )
+hitpoints = 200.0
+potencia_rotacion = 120
 
 [node name="Pausa" type="CanvasLayer" parent="."]
 
